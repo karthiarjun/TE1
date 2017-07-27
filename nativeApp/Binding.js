@@ -15,10 +15,16 @@ export default class TextInANest extends Component {
 
   render() {
     var array = [];
-    array.push(<Text> havsghav </Text>);
-    array.push(<Text> havdjshhvsghav </Text>);
+    (this.state.titleText).map(x=> {
+      array.push(
+      <Text key={array.length} >
+      {x.name}
+      </Text>);
+    });
     return (
-    <Text> {array}</Text>
+    <View>
+    {array}
+    </View>
     );
   }
 };
